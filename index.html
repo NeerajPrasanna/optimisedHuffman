@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,19 +18,16 @@
             font-size: 1rem;
             cursor: pointer;
         }
-
         #groupSize1:focus,
         #groupSize2:focus {
             outline: none;
             border-color: #6366f1;
         }
-
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
         }
-
         body {
             font-family: 'Inter', sans-serif;
             background: linear-gradient(135deg, #1a202c, #2d3748);
@@ -43,7 +39,6 @@
             align-items: center;
             padding: 20px;
         }
-
         header {
             max-width: 1200px;
             width: 100%;
@@ -58,14 +53,12 @@
             position: relative;
             z-index: 100000;
         }
-
         header h1 {
             font-size: 2.5rem;
             font-weight: 700;
             color: #a5b4fc;
             text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
         }
-
         .info-icon {
             position: absolute;
             top: 20px;
@@ -82,11 +75,9 @@
             cursor: pointer;
             transition: background 0.2s ease;
         }
-
         .info-icon:hover {
             background: rgba(255, 255, 255, 0.2);
         }
-
         .info-popup {
             display: none;
             position: absolute;
@@ -101,11 +92,9 @@
             width: 200px;
             z-index: 10000;
         }
-
         .info-popup.active {
             display: block;
         }
-
         .container {
             max-width: 1200px;
             width: 100%;
@@ -113,7 +102,6 @@
             gap: 20px;
             margin: auto;
         }
-
         .box {
             flex: 1;
             background: rgba(255, 255, 255, 0.05);
@@ -126,23 +114,19 @@
             flex-direction: column;
             overflow: hidden;
         }
-
         .chatbox {
             flex: 1;
         }
-
         .encode-box {
             flex: 1;
             display: flex;
             flex-direction: column;
         }
-
         .header {
             display: flex;
             align-items: center;
             margin-bottom: 16px;
         }
-
         .avatar {
             width: 40px;
             height: 40px;
@@ -154,32 +138,25 @@
             font-weight: 600;
             margin-right: 12px;
         }
-
         .user1 .avatar {
             background: #4f46e5;
         }
-
         .user2 .avatar {
             background: #14b8a6;
         }
-
         .encode-box .header h2 {
             color: #d1d5db;
         }
-
         .box h2 {
             font-size: 1.5rem;
             font-weight: 600;
         }
-
         .user1 h2 {
             color: #a5b4fc;
         }
-
         .user2 h2 {
             color: #5eead4;
         }
-
         .chat-area {
             flex-grow: 1;
             height: 400px;
@@ -189,7 +166,6 @@
             padding: 16px;
             margin-bottom: 16px;
         }
-
         .encode-area {
             flex-grow: 1;
             height: 400px;
@@ -198,7 +174,6 @@
             border-radius: 8px;
             padding: 16px;
         }
-
         .message-bubble {
             margin-bottom: 12px;
             padding: 12px;
@@ -207,37 +182,31 @@
             animation: slideIn 0.3s ease-out;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
         }
-
         @keyframes slideIn {
             from {
                 transform: translateY(20px);
                 opacity: 0;
             }
-
             to {
                 transform: translateY(0);
                 opacity: 1;
             }
         }
-
         .sent {
             background: #4f46e5;
             color: #fff;
             margin-left: auto;
         }
-
         .received {
             background: #14b8a6;
             color: #fff;
             margin-right: auto;
         }
-
         .error {
             background: #dc2626;
             color: #fff;
             margin-right: auto;
         }
-
         .encode-message {
             background: #374151;
             color: #e5e7eb;
@@ -246,36 +215,30 @@
             margin-bottom: 12px;
             animation: slideIn 0.3s ease-out;
         }
-
         .encode-message p {
             margin-bottom: 8px;
         }
-
         .encode-message table {
             width: 100%;
             border-collapse: collapse;
             margin-top: 8px;
             font-size: 0.9rem;
         }
-
         .encode-message th,
         .encode-message td {
             border: 1px solid #4b5563;
             padding: 8px;
             text-align: left;
         }
-
         .encode-message th {
             background: #1f2937;
             color: #d1d5db;
         }
-
         .input-area {
             display: flex;
             gap: 12px;
             flex-wrap: wrap;
         }
-
         .input-field {
             flex: 1;
             min-width: 0;
@@ -287,13 +250,11 @@
             font-size: 1rem;
             transition: border-color 0.2s ease;
         }
-
         .input-field:focus {
             outline: none;
             border-color: #6366f1;
             box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
         }
-
         select {
             background: rgba(55, 65, 81, 0.5);
             border: 1px solid #4b5563;
@@ -304,12 +265,10 @@
             width: 120px;
             cursor: pointer;
         }
-
         select:focus {
             outline: none;
             border-color: #6366f1;
         }
-
         .send-button {
             background: #4f46e5;
             color: #fff;
@@ -322,39 +281,31 @@
             transition: all 0.2s ease;
             max-width: 100px;
         }
-
         .user2 .send-button {
             background: #14b8a6;
         }
-
         .send-button:hover {
             transform: translateY(-2px);
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
         }
-
         @media (max-width: 900px) {
             .container {
                 flex-direction: column;
             }
-
             .box {
                 flex: none;
             }
-
             header {
                 padding: 15px;
             }
-
             header h1 {
                 font-size: 2rem;
             }
-
             .info-icon {
                 width: 25px;
                 height: 25px;
                 font-size: 0.9rem;
             }
-
             .info-popup {
                 top: 50px;
                 right: 20px;
@@ -363,15 +314,13 @@
         }
     </style>
 </head>
-
 <body>
     <header id="header">
         <h1>Chat App using Optimised Huffman Coding</h1>
         <span class="info-icon">i</span>
         <div class="info-popup">
             <h3>About This App</h3>
-            <p>This is a small website to demonstrate the optimised huffman coding approach using group-2 and group-3
-                encoding,
+            <p>This is a small website to demonstrate the optimised huffman coding approach using group-2 and group-3 encoding,
                 as described by Gautam R. and Dr. S Murali in their research paper <a
                     href="https://arxiv.org/pdf/1607.08433" target="_blank" style="color: rgb(101, 216, 255)">here</a>
             </p>
@@ -414,14 +363,14 @@
             </div>
             <div id="chat2" class="chat-area"></div>
             <div class="input-area">
-                <input id="input2" type="text" class="input-field" placeholder="Type your message...">
+                <input id=" tất2" type="text" class="input-field" placeholder="Type your message...">
                 <button onclick="sendMessage(2)" class="send-button">Send</button>
             </div>
         </div>
     </div>
 
     <script>
-       
+        // Handle Info Popup
         const infoIcon = document.querySelector('.info-icon');
         const infoPopup = document.querySelector('.info-popup');
 
@@ -436,7 +385,7 @@
             }
         });
 
-       
+        // Priority Queue for Huffman Tree
         class PriorityQueue {
             constructor() {
                 this.values = [];
@@ -453,7 +402,7 @@
             }
         }
 
-      
+        // Node for Huffman Tree
         class Node {
             constructor(char, freq, left = null, right = null) {
                 this.char = char;
@@ -463,7 +412,7 @@
             }
         }
 
-       
+        // Standard Huffman Coding
         function standardHuffmanCoding(text) {
             if (!text) return { encoded: '', charCodes: {} };
 
@@ -506,11 +455,11 @@
             return { encoded, charCodes };
         }
 
-      
+        // Optimized Huffman Coding by Grouping
         function optimizedHuffmanCoding(text, groupSize) {
-            if (!text) return { encoded: '', charCodes: {} };
+            if (!text) return { encoded: '', charCodes: {}, groupCodes: {} };
 
-
+            // Group characters
             const groups = [];
             for (let i = 0; i < text.length; i += groupSize) {
                 let group = text.slice(i, i + groupSize);
@@ -520,18 +469,19 @@
                 groups.push(group);
             }
 
-      
+            // Calculate group frequencies
             const groupFreq = {};
             groups.forEach(group => {
                 groupFreq[group] = (groupFreq[group] || 0) + 1;
             });
 
+            // Build Huffman Tree for groups
             const pq = new PriorityQueue();
             for (let group in groupFreq) {
                 pq.enqueue(new Node(group, groupFreq[group]));
             }
 
-            if (pq.values.length === 0) return { encoded: '', charCodes: {} };
+            if (pq.values.length === 0) return { encoded: '', charCodes: {}, groupCodes: {} };
 
             while (pq.values.length > 1) {
                 const left = pq.dequeue();
@@ -552,14 +502,14 @@
             }
             generateGroupCodes(root);
 
-
+            // Assign codes to individual characters
             const charCodes = {};
             const charFreq = {};
             for (let char of text) {
                 charFreq[char] = (charFreq[char] || 0) + 1;
             }
 
-          
+            // Ensure prefix-free codes
             const usedCodes = new Set();
             for (let group in groupCodes) {
                 const chars = group.split('');
@@ -577,7 +527,7 @@
                         suffix = index === 0 ? '0' : (index === 1 ? '10' : '11');
                     }
                     const proposedCode = baseCode + suffix;
-                 
+                    // Ensure no prefix conflict
                     let finalCode = proposedCode;
                     let extension = '';
                     while (usedCodes.has(finalCode) || Array.from(usedCodes).some(code => code.startsWith(finalCode) || finalCode.startsWith(code))) {
@@ -589,7 +539,7 @@
                 });
             }
 
-           
+            // Validate codebook
             for (let char1 in charCodes) {
                 for (let char2 in charCodes) {
                     if (char1 !== char2 && charCodes[char1].startsWith(charCodes[char2])) {
@@ -598,7 +548,7 @@
                 }
             }
 
-          
+            // Encode the text
             let encoded = '';
             for (let char of text) {
                 if (charCodes[char]) {
@@ -609,10 +559,10 @@
             }
 
             console.log('Text:', text, 'Group Size:', groupSize, 'Groups:', groups, 'Group Codes:', groupCodes, 'Char Codes:', charCodes, 'Encoded:', encoded);
-            return { encoded, charCodes };
+            return { encoded, charCodes, groupCodes };
         }
 
-       
+        // Decode Huffman encoded text
         function decodeHuffman(encoded, charCodes) {
             if (!encoded || !charCodes) {
                 console.error('Invalid encoded string or codebook');
@@ -654,12 +604,12 @@
             return decoded;
         }
 
-      
+        // Calculate compression results
         function calculateCompressionResults(text) {
             const utf8Bits = text.length * 8;
             const { encoded: huffmanEncoded, charCodes: huffmanCodes } = standardHuffmanCoding(text);
-            const { encoded: optHuffman2Encoded, charCodes: optHuffman2Codes } = optimizedHuffmanCoding(text, 2);
-            const { encoded: optHuffman3Encoded, charCodes: optHuffman3Codes } = optimizedHuffmanCoding(text, 3);
+            const { encoded: optHuffman2Encoded, charCodes: optHuffman2Codes, groupCodes: optHuffman2GroupCodes } = optimizedHuffmanCoding(text, 2);
+            const { encoded: optHuffman3Encoded, charCodes: optHuffman3Codes, groupCodes: optHuffman3GroupCodes } = optimizedHuffmanCoding(text, 3);
 
             const results = [
                 { name: 'UTF-8', bits: utf8Bits, ratio: 0 },
@@ -668,33 +618,40 @@
                 { name: 'Optimized Huffman’s Coding using set of 3', bits: optHuffman3Encoded.length, ratio: ((utf8Bits - optHuffman3Encoded.length) / utf8Bits * 100).toFixed(2) }
             ];
 
-            return { results, huffmanCodes, optHuffman2Codes, optHuffman3Codes, huffmanEncoded, optHuffman2Encoded, optHuffman3Encoded };
+            return { results, huffmanCodes, optHuffman2Codes, optHuffman3Codes, huffmanEncoded, optHuffman2Encoded, optHuffman3Encoded, optHuffman2GroupCodes, optHuffman3GroupCodes };
         }
 
-      
+        // Send Message
         function sendMessage(user) {
             const input = document.getElementById(`input${user}`);
             const groupSize = parseInt(document.getElementById(`groupSize${user}`).value);
             const message = input.value.trim();
             if (!message) return;
 
-            
-            const { results, huffmanCodes, optHuffman2Codes, optHuffman3Codes, huffmanEncoded, optHuffman2Encoded, optHuffman3Encoded } = calculateCompressionResults(message);
+            // Calculate compression results
+            const { results, huffmanCodes, optHuffman2Codes, optHuffman3Codes, huffmanEncoded, optHuffman2Encoded, optHuffman3Encoded, optHuffman2GroupCodes, optHuffman3GroupCodes } = calculateCompressionResults(message);
 
-           
-            let charCodes, encoded;
+            // Select encoding based on group size
+            let charCodes, encoded, groupCodes;
+            let encodingName;
             if (groupSize === 1) {
                 charCodes = huffmanCodes;
                 encoded = huffmanEncoded;
+                groupCodes = {};
+                encodingName = 'Standard Huffman Coding';
             } else if (groupSize === 2) {
                 charCodes = optHuffman2Codes;
                 encoded = optHuffman2Encoded;
+                groupCodes = optHuffman2GroupCodes;
+                encodingName = 'Optimized Huffman’s Coding using set of 2';
             } else {
                 charCodes = optHuffman3Codes;
                 encoded = optHuffman3Encoded;
+                groupCodes = optHuffman3GroupCodes;
+                encodingName = 'Optimized Huffman’s Coding using set of 3';
             }
 
-           
+            // Display sent message
             const chat = document.getElementById(`chat${user}`);
             chat.innerHTML += `
                 <div class="message-bubble sent">
@@ -703,7 +660,7 @@
                 </div>`;
             chat.scrollTop = chat.scrollHeight;
 
-           
+            // Display compression results
             const encodeArea = document.getElementById('encodeArea');
             let tableHtml = `
                 <table>
@@ -721,14 +678,42 @@
                     </tr>`;
             });
             tableHtml += `</table>`;
+
+            // Character encoding table
+            let charTableHtml = `
+                <table>
+                    <tr>
+                        <th>${groupSize === 1 ? 'Character' : 'Group'}</th>
+                        <th>Encoded Bits</th>
+                    </tr>`;
+            let charCodeEntries;
+            if (groupSize === 1) {
+                charCodeEntries = Object.entries(charCodes);
+            } else {
+                charCodeEntries = Object.entries(groupCodes);
+            }
+            charCodeEntries.sort((a, b) => a[0].localeCompare(b[0]));
+            charCodeEntries.forEach(([char, code]) => {
+                const displayChar = char === ' ' ? '(space)' : char;
+                charTableHtml += `
+                    <tr>
+                        <td>${displayChar}</td>
+                        <td>${code}</td>
+                    </tr>`;
+            });
+            charTableHtml += `</table>`;
+
             encodeArea.innerHTML += `
                 <div class="encode-message">
                     <p>Message: ${message}</p>
+                    <p>Encoding: ${encodingName}</p>
                     ${tableHtml}
+                    <p>Character/Group Encodings:</p>
+                    ${charTableHtml}
                 </div>`;
             encodeArea.scrollTop = encodeArea.scrollHeight;
 
-          
+            // Simulate sending to other user
             const otherUser = user === 1 ? 2 : 1;
             const otherChat = document.getElementById(`chat${otherUser}`);
             const decodedMessage = decodeHuffman(encoded, charCodes);
@@ -745,11 +730,11 @@
             }
             otherChat.scrollTop = otherChat.scrollHeight;
 
-           
+            // Clear input
             input.value = '';
         }
 
-       
+        // Handle Enter key
         document.getElementById('input1').addEventListener('keypress', e => {
             if (e.key === 'Enter') sendMessage(1);
         });
@@ -758,5 +743,4 @@
         });
     </script>
 </body>
-
 </html>
